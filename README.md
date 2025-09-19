@@ -71,6 +71,35 @@ Launch the frontend app locally.
     ```
 * You can visit `http://localhost:8100` in your web browser to verify that the application is running. You should see a web interface.
 
+## Screenshots
+
+The following screenshots demonstrate the application's deployment and infrastructure setup:
+
+### Application Interface
+![Udagram Application](screenshots/Screenshot%202025-09-19%20190152.png)
+*Main application interface showing the Udagram image filtering application*
+
+### Infrastructure Verification
+![Kubernetes Pods](screenshots/Screenshot%202025-09-19%20191030.png)
+*Kubernetes pods deployment verification using `kubectl get pods`*
+
+![Kubernetes Services](screenshots/Screenshot%202025-09-19%20192902.png)
+*Kubernetes services configuration verification*
+
+### Deployment Pipeline
+![Travis CI Build](screenshots/Screenshot%202025-09-19%20202949.png)
+*Travis CI showing successful build and deployment*
+
+![DockerHub Containers](screenshots/Screenshot%202025-09-19%20203306.png)
+*DockerHub repository showing deployed containers*
+
+### Application Monitoring
+![Application Logs](screenshots/Screenshot%202025-09-19%20211531.png)
+*Application logs verification using `kubectl logs`*
+
+![Horizontal Pod Autoscaler](screenshots/Screenshot%202025-09-19%20212106.png)
+*Horizontal Pod Autoscaler (HPA) configuration verification*
+
 ## Tips
 1. Take a look at `udagram-api` -- does it look like we can divide it into two modules to be deployed as separate microservices?
 2. The `.dockerignore` file is included for your convenience to not copy `node_modules`. Copying this over into a Docker container might cause issues if your local environment is a different operating system than the Docker image (ex. Windows or MacOS vs. Linux).
