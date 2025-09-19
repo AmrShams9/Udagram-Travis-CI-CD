@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: amrshams/frontend:latest
+          image: amrshams/udagram-frontend:latest
           ports:
             - containerPort: 8100
           envFrom:
