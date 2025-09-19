@@ -58,3 +58,8 @@ logfile
 # Local environment setup
 set_env.sh
 .env
+# Environment and secrets
+aws-secrets.yml
+env-secret.yaml
+*.pem
+*.log

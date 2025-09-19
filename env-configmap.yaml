@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-config
+data:
+  URL: "10.100.164.241:8100"
+  FEED_API: "10.100.162.248/api/v0/feed"
+  USER_API: "10.100.47.99/api/v0/user"
