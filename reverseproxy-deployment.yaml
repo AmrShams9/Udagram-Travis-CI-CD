@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: reverseproxy
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: reverseproxy
@@ -20,3 +20,18 @@ spec:
           envFrom:
             - configMapRef:
                 name: env-config
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+          volumeMounts:
+            - name: nginx-config
+              mountPath: /etc/nginx/nginx.conf
+              subPath: nginx.conf
+      volumes:
+        - name: nginx-config
+          configMap:
+            name: reverseproxy-nginx-config
